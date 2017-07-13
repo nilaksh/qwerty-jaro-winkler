@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'com.myntra.charles.QwertyJaroWinklerDistance'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    baseName = 'qwerty-jwd-solr-plugin'
+    version =  '0.1.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "org.apache.lucene:lucene-spellchecker:3.6.2"
+    testCompile "junit:junit:4.12"
+}
